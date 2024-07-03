@@ -33,11 +33,12 @@ class Controller:
             nodi = self._model.get_peso_nodi()
             for c, v in nodi.items():
                 self._view.txt_result.controls.append(ft.Text(f"Nodo {c.id}, somma pesi su archi = {v}"))
+            self._view.btn_path.disabled = False
             self._view.update_page()
 
         else:
             self._view.txt_result.controls.clear()
-            self._view.txt_result.controls.append(ft.Text("Selezionare tutti e due i campi. "))
+            self._view.create_alert("Selezionare tutti e due i campi. ")
             self._view.update_page()
 
     def handle_path(self, e):

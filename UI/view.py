@@ -47,7 +47,7 @@ class View(ft.UserControl):
         self._page.controls.append(self.txt_result)
         self._page.update()
 
-        self.btn_path = ft.ElevatedButton(text="Calcola percorso", on_click=self._controller.handle_path)
+        self.btn_path = ft.ElevatedButton(text="Calcola percorso", on_click=self._controller.handle_path, disabled=True)
 
         row2 = ft.Row([self.btn_path],
                       alignment=ft.MainAxisAlignment.CENTER)
